@@ -12,7 +12,8 @@ export default function ChatContainer() {
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const endpoint = "/foundation-models/model/chat/anthropic.claude-v2/invoke";
+    //const endpoint = "/foundation-models/model/chat/anthropic.claude-v2/invoke";
+    const endpoint = "/foundation-models/model/chat/anthropic.claude-v3/invoke";
     const api = `${GlobalConfig.apiHost}:${GlobalConfig.apiPort}${endpoint}`;
 
     const handleInputChange = (e) => {
@@ -65,7 +66,7 @@ export default function ChatContainer() {
     return <div className="flex flex-col flex-auto h-full p-6">
         <h3 className="text-3xl font-medium text-gray-700">Chat Playground</h3>
         <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 p-4 mt-8">
-            <ModelIndicator modelName="Anthropic Claude 2" />
+            <ModelIndicator modelName="Anthropic Claude 3" />
             <div className="flex flex-col h-full overflow-x-auto mb-4">
                 <div className="flex flex-col h-full">
                     <div className="grid grid-cols-12 gap-y-2">
