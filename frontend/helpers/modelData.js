@@ -42,6 +42,20 @@ export const models = [
             max: 4096,
             default: 1024
         }
+    },
+    {
+        modelName: "AWS Nova Pro",
+        modelId: "us.amazon.nova-pro-v1:0",
+        temperatureRange: {
+            min: 0,
+            max: 1,
+            default: 0.7
+        },
+        maxTokenRange: {
+            min: 0,
+            max: 4096,
+            default: 1024
+        }
     }
 ]
 

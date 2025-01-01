@@ -7,7 +7,7 @@ from . import models
 from . import claude
 from . import jurassic2
 
-from fm import claude3
+from fm import claude3, novapro
 
 
 
@@ -20,6 +20,8 @@ def invoke(body: models.TextRequest, modelId: str):
             completion = claude.invoke(body.prompt, body.temperature, body.maxTokens)
         if modelId == "anthropic.claude-3-sonnet-20240229-v1:0":
             completion = claude3.invoke(body.prompt, body.temperature, body.maxTokens)
+        if modelId == "us.amazon.nova-pro-v1:0":
+            completion = novapro.invoke(body.prompt, body.temperature, body.maxTokens)
         elif modelId == "ai21.j2-mid-v1":
             completion = jurassic2.invoke(body.prompt, body.temperature, body.maxTokens)
 
