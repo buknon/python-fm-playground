@@ -3,7 +3,7 @@ import logging
 import json 
 
 logger = logging.getLogger('uvicorn.error')
-# logger.setLevel(logging.DEBUG)
+
 
 bedrock_runtime = boto3.client(
     service_name="bedrock-runtime",

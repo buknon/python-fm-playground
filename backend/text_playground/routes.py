@@ -7,7 +7,7 @@ from . import models
 from . import claude
 from . import jurassic2
 
-from fm import claude3, novapro
+from fm import claude3, novapro, anthropic_router
 
 
 
@@ -20,6 +20,8 @@ def invoke(body: models.TextRequest, modelId: str):
             completion = claude.invoke(body.prompt, body.temperature, body.maxTokens)
         if modelId == "anthropic.claude-3-sonnet-20240229-v1:0":
             completion = claude3.invoke(body.prompt, body.temperature, body.maxTokens)
+        if modelId == "default-prompt-router-anthropic.claude:1":
+            completion = anthropic_router.invoke(body.prompt, body.temperature, body.maxTokens)
         if modelId == "us.amazon.nova-pro-v1:0":
             completion = novapro.invoke(body.prompt, body.temperature, body.maxTokens)
         elif modelId == "ai21.j2-mid-v1":

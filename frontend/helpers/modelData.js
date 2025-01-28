@@ -43,6 +43,7 @@ export const models = [
             default: 1024
         }
     },
+
     {
         modelName: "AWS Nova Pro",
         modelId: "us.amazon.nova-pro-v1:0",
@@ -50,6 +51,21 @@ export const models = [
             min: 0,
             max: 1,
             default: 0.7
+        },
+        maxTokenRange: {
+            min: 0,
+            max: 4096,
+            default: 1024
+        }
+    },
+    
+    {
+        modelName: "Anthropic Intelligent Router",
+        modelId: "default-prompt-router-anthropic.claude:1",
+        temperatureRange: {
+            min: 0,
+            max: 1,
+            default: 0.5
         },
         maxTokenRange: {
             min: 0,
