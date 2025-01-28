@@ -6,7 +6,7 @@ import Content from "@/components/Content";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-    title: 'Python FM Playground',
+    title: 'FM Playground',
     description: 'This sample application shows how to use the Amazon Bedrock SDK for Python.',
 }
 
