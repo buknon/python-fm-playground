@@ -25,8 +25,11 @@ Ensure you have the following installed:
 - You must have an [AWS account](https://aws.amazon.com/free/), and have your default credentials and AWS Region configured as described in the [AWS Tools and SDKs Shared Configuration and Credentials Reference Guide](https://docs.aws.amazon.com/credref/latest/refdocs/creds-config-files.html).
 - You must request access to the models before you can use them. For more information, see [Model access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html). To run the app, you need access to the following models in `us-east-1`:
   - Anthropic Claude
+  - Anthropic Claude 3
   - AI21 Labs Jurassic-2 Mid
   - Stability AI Stable Diffusion XL
+  - Amazon Nova Pro
+  - Anthropic Prompt Router
 
 ## Running the Application
 
@@ -37,7 +40,7 @@ After verifying the prerequisites, follow these steps:
 Open a terminal, navigate to a directory of your choice, and execute the following command:
 
 ```shell
-git clone https://github.com/build-on-aws/python-fm-playground.git
+git clone https://github.com/buknon/python-fm-playground.git
 ```
 
 ### Virtual Environment Setup
