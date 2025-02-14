@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "55500:55500"
+    environment:
+      - AWS_REGION=us-east-1
+    networks:
+      - app_network
+    volumes:
+      - /Users/username/.aws:/root/.aws
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app_network
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=http://backend:55500
+
+networks:
+  app_network:
+    driver: bridge
